@@ -13,8 +13,8 @@ Installation on Windows
 Installation using Github on Debian/Ubuntu
 -------------------------
 
-# sudo apt-get install -y git-core python-dev libssl-dev
-# git clone https://github.com/SNatural/stratum-mining-proxy.git
+1 sudo apt-get install -y git-core python-dev libssl-dev
+2 git clone https://github.com/SNatural/stratum-mining-proxy.git
 cd stratum-mining-proxy
 sudo python distribute_setup.py
 
