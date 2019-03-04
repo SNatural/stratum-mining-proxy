@@ -12,36 +12,23 @@ Installation on Windows
 
 Installation using Github on Debian/Ubuntu
 -------------------------
-This is advanced option for experienced users, but give you the easiest way for updating the proxy.
 
-Install with the auto install script
-```bash
-curl "https://raw.github.com/CryptoManiac/stratum-mining-proxy/master/auto_install.sh" | sudo sh
-```
-
-To install line-by-line
-```bash
-# Python and libssl development packages are required
-sudo apt-get install -y git-core python-dev libssl-dev
-git clone https://github.com/CryptoManiac/stratum-mining-proxy.git
+# sudo apt-get install -y git-core python-dev libssl-dev
+# git clone https://github.com/SNatural/stratum-mining-proxy.git
 cd stratum-mining-proxy
-
-# This will upgrade setuptools package
 sudo python distribute_setup.py
 
-# Build and install LTC scrypt extension
-cd litecoin_scrypt
-sudo python setup.py install
-cd ..
+sudo apt-get install python-pip
+sudo apt-get install python-autobahn
+sudo pip install stratum
+pip install --upgrade pip
 
-# This will install required dependencies (namely Twisted and Stratum libraries), but don't install the package into the system.
 sudo python setup.py develop
-```
 
-You can start the Stratum proxy by typing ```./mining_proxy.py``` in the terminal window. Using default settings, it connects to Itzod's mining pool.
 
-Also you have ability to start Stratum/LTC proxy by typing  ```./mining-proxy.py -pa scrypt```. Using default settings, it connects to LTCMine mining pool.
 
+
+./mining_proxy.py -o us-west01.miningrigrentals.com -p 3333
 If you want to connect to another pool or change other proxy settings, type ```./mining_proxy.py --help```.
 
 If you want to update the proxy, type ```git pull``` in the package directory.
