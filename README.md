@@ -13,22 +13,20 @@ Installation on Windows
 Installation using Github on Debian/Ubuntu
 -------------------------
 
-1 sudo apt-get install -y git-core python-dev libssl-dev
-2 git clone https://github.com/SNatural/stratum-mining-proxy.git
-cd stratum-mining-proxy
-sudo python distribute_setup.py
+1. sudo apt-get install -y git-core python-dev libssl-dev
+2. git clone https://github.com/SNatural/stratum-mining-proxy.git
+3. cd stratum-mining-proxy
+4. sudo python distribute_setup.py
 
-sudo apt-get install python-pip
-sudo apt-get install python-autobahn
-sudo pip install stratum
-pip install --upgrade pip
+5. sudo apt-get install python-pip
+6. sudo apt-get install python-autobahn
+7. sudo pip install stratum
+8. pip install --upgrade pip
 
-sudo python setup.py develop
+9. sudo python setup.py develop
 
+10. ./mining_proxy.py -o host -p port
 
-
-
-./mining_proxy.py -o us-west01.miningrigrentals.com -p 3333
 If you want to connect to another pool or change other proxy settings, type ```./mining_proxy.py --help```.
 
 If you want to update the proxy, type ```git pull``` in the package directory.
